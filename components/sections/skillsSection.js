@@ -33,7 +33,7 @@ function SkillsSection() {
    
   return ( 
       <>
-        <Dialog title={title} message={message} key={title} />
+        <Dialog title={title} message={message} key={title} id="skills"/>
         <section className="relative my-24 ">
         <motion.div 
               initial="hidden"

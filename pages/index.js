@@ -9,11 +9,11 @@ const options = {
   transition: transitions.SCALE
 };
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <Layout>
       <HomeSection />
-      <WorkSection />
+      <WorkSection projects={projects} />
       <AboutSection />
       <SkillsSection />
       <Provider template={AlertTemplate} {...options}>
@@ -21,4 +21,15 @@ export default function Home() {
       </Provider>
     </Layout>
   )
+}
+
+import { getProjects } from "../libs/projects"
+
+export async function getStaticProps() {
+
+  const projects = await getProjects()
+
+  return {
+    props : { projects}
+  }
 }

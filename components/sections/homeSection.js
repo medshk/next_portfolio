@@ -2,6 +2,7 @@ import React, { useRef , useEffect } from 'react'
 import { Canvas } from '../canvas/canvas'
 import { IoIosArrowDropdown } from "react-icons/io"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 function HomeSection() {
   const line1 = "Hola,",
@@ -42,7 +43,7 @@ function HomeSection() {
 
 
   return (
-    <div className='w-full h-screen relative '>
+    <div className='w-full h-screen relative ' id="home">
         <Canvas/>
         <span className=' absolute text-gr font-pm italic top-2 block lg:left-8'>{'</html>'}</span>
         <span className=' absolute text-gr font-pm italic top-12 left-6 block lg:left-12'>{'<body>'}</span>
@@ -80,9 +81,11 @@ function HomeSection() {
             <p className='domain-text-zone '>
                 Full Stack Developer / Software Engineer 
             </p>
-            <button className='btn'>
-                Contact me
-            </button>
+           <Link href="/#contact">
+            <a className='btn inline-block mt-16'>
+                    Contact me
+                </a>
+           </Link>
         </div>
         <IoIosArrowDropdown className='absolute bottom-4 left-[45%] text-primary w-12 h-12 animate-bounce'/>
     </div>

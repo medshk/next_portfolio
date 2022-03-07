@@ -13,7 +13,7 @@ function AboutSection() {
                       I want to expand my knowledge further more and build awesome staff if your interested reach out. `
   return (
     
-    <Dialog title={title} message={message} key={title} />
+    <Dialog id="about" title={title} message={message} key={title} />
   )
 }
 
