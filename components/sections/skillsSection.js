@@ -9,7 +9,7 @@ function SkillsSection() {
 
     // dialog message 
     const message = "An extanded set of skills "
-
+    // 
 
     const cardGrid = {
         hidden : { opacity : 1 },
