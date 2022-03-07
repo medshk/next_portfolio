@@ -40,7 +40,7 @@ function ProjectModal({ project , handleModal }) {
       >
         {project.attributes.pictures.data.map(image => {
           return (
-            <SwiperSlide className="w-full"> <Image src={getUrl(image)} objectFit='contain' width="100%" height="100%" layout="fill"/></SwiperSlide>
+            <SwiperSlide className="w-full" key={image.id}> <Image src={getUrl(image)} objectFit='contain' width="100%" height="100%" layout="fill"/></SwiperSlide>
           )
         })}
             
