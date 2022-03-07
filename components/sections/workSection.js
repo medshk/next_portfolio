@@ -16,8 +16,8 @@ function WorkSection({ projects }) {
 
 
   return (
-    <>
-        <Dialog title={title} message={message} key={title} id="work"/>
+    <div id="work">
+        <Dialog title={title} message={message} key={title} />
         <section className="relative my-32" >
 
             <div className="card-container grid grid-cols-2 gap-0 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
@@ -31,7 +31,7 @@ function WorkSection({ projects }) {
             </div>
 
         </section>
-    </>
+    </div>
   )
 }
 

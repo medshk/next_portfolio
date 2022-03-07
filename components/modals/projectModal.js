@@ -38,11 +38,11 @@ function ProjectModal({ project , handleModal }) {
           modules={[Pagination, Navigation]}
           className="w-full h-[30vh] sm:w-[69vw] sm:h-[70vh]"
       >
-        {/* {project.attributes.pictures.data.map((image,index) => {
+        {project.attributes.pictures.data.map((image) => {
           return (
-            <SwiperSlide className="w-full" key={index}> <Image src={getUrl(image)} objectFit='contain' width="100%" height="100%" layout="fill"/></SwiperSlide>
+            <SwiperSlide className="w-full" key={image.id}> <Image src={getUrl(image)} objectFit='contain' width="100%" height="100%" layout="fill"/></SwiperSlide>
           )
-        })} */}
+        })}
             
           
       </Swiper>

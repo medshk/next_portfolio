@@ -41,8 +41,8 @@ function ContactSection() {
   };  
 
   return (
-    <>
-      <Dialog id="contact" title={title} message={message}/>
+    <div id="contact">
+      <Dialog  title={title} message={message}/>
       <div className='mx-auto sm:ml-8 w-[20rem] lg:w-[26rem] mb-32'>
       <form onSubmit={e=>handleSubmit(onSubmit(e))} ref={formRef}>
           <input type="text" name="user_name" placeholder='Name' className={`bg-gr  h-10 p-2  outline-0 w-full focus:border-b-2  ${errors.user_name ? "focus:border-red-600": "focus:border-primary"}`} {...register("user_name",{required: true})} />
@@ -55,7 +55,7 @@ function ContactSection() {
           <button type="submit"  className='btn float-right'>Send Message</button>
       </form>
       </div>
-    </>
+    </div>
   )
 }
 
