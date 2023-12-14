@@ -19,8 +19,9 @@ export default function Home() {
   return (
     <Layout>
       <HomeSection />
-      <WorkSection projects={projects} />
       <AboutSection />
+      <WorkSection projects={projects} />
+
       <SkillsSection />
       <Provider template={AlertTemplate} {...options}>
         <ContactSection />

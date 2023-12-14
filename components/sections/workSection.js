@@ -9,7 +9,7 @@ function WorkSection({ projects }) {
   const title = "My Projects";
 
   // dialog message
-  const message = `This is Projects i've recently done`;
+  const message = `This are Projects i've recently done`;
 
   return (
     <div id="work">
