@@ -1,6 +1,4 @@
 import ProjectCard from "../cards/projectCard";
-import react from "../../public/images/react.jpg";
-import logo from "../../public/logo.jpg";
 import Dialog from "../wrappers/dialog";
 
 function WorkSection({ projects }) {
@@ -9,7 +7,7 @@ function WorkSection({ projects }) {
   const title = "My Projects";
 
   // dialog message
-  const message = `This are Projects i've recently done`;
+  const message = `These are Projects i've recently done`;
 
   return (
     <div id="work">

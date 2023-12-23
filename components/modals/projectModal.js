@@ -1,22 +1,9 @@
 import Image from "next/image";
 
 import { AiFillCloseCircle } from "react-icons/ai";
-import pp from "../../public/images/project1.jpg";
-// import Swiper core and required modules
-import { Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { FaGithub, FaLink } from "react-icons/fa";
-import Link from "next/link";
+import { FaExternalLinkSquareAlt, FaGithub } from "react-icons/fa";
 
 function ProjectModal({ project, handleModal }) {
-  const getUrl = (image) => {
-    return `${image.attributes.url}`;
-  };
   const handleClose = () => {
     handleModal(false);
   };
@@ -32,61 +19,51 @@ function ProjectModal({ project, handleModal }) {
       >
         <AiFillCloseCircle className="w-10 h-10" />
       </button>
-      <div className="mx-auto bg-stone-800 text-white px-8 py-4 rounded md:w-[800px]">
-        <p>
-          <span className="text-primary">Description</span> :{" "}
-          {project.attributes.title}
-        </p>
 
-        <div className="mt-6">
-          <p>
-            <span className="text-primary">Technologies</span> :{" "}
-            {project.attributes.tools}
-          </p>
+      {/* content container */}
+      <div className="flex flex-col md:flex-row-reverse gap-4">
+        <div className="mx-auto bg-stone-800 text-white px-8 py-4 rounded md:w-[700px]  md:text-xl">
+          <div className="mb-6 flex text-primary gap-4 items-center">
+            <p>Links:</p>
+            <div className="flex text-white gap-3">
+              <a
+                href={project.links.github}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaGithub className="w-5 h-5 hover:text-gray-300 transition-all duration-200 ease-in-out" />
+              </a>
+              <a
+                href={project.links.live}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FaExternalLinkSquareAlt className="w-5 h-5 hover:text-gray-300 transition-all duration-200 ease-in-out" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <span className="text-primary ">Description</span> :{" "}
+            {project.attributes.title}
+          </div>
+
+          <div className="mt-6">
+            <p>
+              <span className="text-primary">Technologies</span> :{" "}
+              {project.attributes.tools}
+            </p>
+          </div>
         </div>
-        <div className="mt-6">
-          <p className="flex items-baseline gap-4">
-            <span className="text-primary flex gap-1 ">
-              <FaLink />
-              {":"}
-            </span>
-            <a
-              href={project.links.live}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Live preview
-            </a>
-          </p>
-          <p className="flex items-baseline gap-4">
-            <span className="text-primary flex gap-1">
-              <FaGithub /> {":"}
-            </span>
-            <a
-              href={project.links.github}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github repo
-            </a>
-          </p>
+
+        <div className="md:w-[700px] h-[50vh] relative">
+          <Image
+            src={project.attributes.pictures}
+            objectFit="contain"
+            layout="fill"
+            alt="project picture"
+          />
         </div>
       </div>
-
-      <Swiper
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="w-full h-[30vh] sm:w-[69vw] sm:h-[70vh]"
-      >
-        <Image
-          src={project.attributes.pictures}
-          objectFit="contain"
-          width="100%"
-          height="100%"
-          layout="fill"
-          alt="project picture"
-        />
-      </Swiper>
     </div>
   );
 }
