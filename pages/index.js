@@ -94,8 +94,8 @@ const projects = [
       tools: "Built with Nextjs, Tailwind, RestAPI and ReactIcons.",
     },
     links: {
-      live: "https://medshk.github.io/ChemX/",
-      github: "https://github.com/medshk/ChemX",
+      live: "https://movie-project-rottenpotato.vercel.app/",
+      github: "https://github.com/202306-NEA-DZ-FEW/movie-project-rottenpotato",
     },
   },
   {
@@ -108,8 +108,8 @@ const projects = [
       tools: "Built with NextJs, Tailwind and  RestAPI.",
     },
     links: {
-      live: "https://medshk.github.io/ChemX/",
-      github: "https://github.com/medshk/ChemX",
+      live: "https://so9ify.vercel.app/",
+      github: "https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8",
     },
   },
 ];
